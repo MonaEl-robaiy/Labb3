@@ -3,13 +3,9 @@ package kyh.labs.lab3;
 public class Patient {
 
          String name;
-         String Doctor;
-         String initaitePatients;
          String testPatients;
-         String patient;
          String result;
          String disease;
-         String fetchCorrectMedication;
          String treatPatient;
          String getTreatmentName;
          String testAllPatients;
@@ -36,10 +32,8 @@ public class Patient {
     }
 
     public String getSickness() {
-if (treatPatient == null)
-    return testPatients;
-else
-   return treatPatient;
+
+   return testPatients;
 
 
     }
