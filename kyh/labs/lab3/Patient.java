@@ -5,9 +5,6 @@ public class Patient {
          String name;
          String Sickness;
 
-
-
-
     public Patient(String inName, String disease) {
           name = inName;
          Sickness  = disease;
@@ -26,7 +23,7 @@ public class Patient {
 
     public String getSickness() {
 
-    return Sickness;
+        return Sickness;
     }
     public String takeMedication(Medicine medicine) {
 
