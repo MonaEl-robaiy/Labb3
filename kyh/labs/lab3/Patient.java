@@ -3,50 +3,42 @@ package kyh.labs.lab3;
 public class Patient {
 
          String name;
-         String testPatients;
-         String result;
-         String disease;
-         String treatPatient;
-         String getTreatmentName;
-         String testAllPatients;
+         String Sickness;
+
 
 
 
     public Patient(String inName, String disease) {
           name = inName;
-         testPatients  = disease;
+         Sickness  = disease;
     }
 
     public Patient(String inName) {
-
+            name = inName;
     }
 
-
     public boolean isSick() {
-        if(testPatients ==null )
+        if(Sickness ==null ) {
             return false;
-        else
+        }else
             return true;
-
-
     }
 
     public String getSickness() {
 
-   return testPatients;
-
-
+    return Sickness;
     }
     public String takeMedication(Medicine medicine) {
-         if(medicine.getTreatmentName().equals(this.disease)){
-             this.disease= null;
+
+        if(medicine.getTreatmentName().equals(this.Sickness)) {
+             this.Sickness = null;
          }
+
         String result = medicine.toString();
         return result;
-
     }
-    public String getName() {
 
+    public String getName() {
         return name;
     }
 
