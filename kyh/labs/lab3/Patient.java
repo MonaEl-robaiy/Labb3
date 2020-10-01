@@ -3,11 +3,11 @@ package kyh.labs.lab3;
 public class Patient {
 
          String name;
-         String Sickness;
+         String sickness;
 
     public Patient(String inName, String disease) {
           name = inName;
-         Sickness  = disease;
+         sickness  = disease;
     }
 
     public Patient(String inName) {
@@ -15,24 +15,26 @@ public class Patient {
     }
 
     public boolean isSick() {
-        if(Sickness ==null ) {
+
+        if(sickness == null) {
             return false;
         }else
-            return true;
+         return true;
+
     }
 
     public String getSickness() {
 
-        return Sickness;
+        return sickness;
     }
     public String takeMedication(Medicine medicine) {
 
-        if(medicine.getTreatmentName().equals(this.Sickness)) {
-             this.Sickness = null;
+        if(medicine.getTreatmentName().equals(this.sickness)) {
+             this.sickness = null;
          }
 
         String result = medicine.toString();
-        return result;
+        return null;
     }
 
     public String getName() {
