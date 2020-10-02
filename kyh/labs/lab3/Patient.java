@@ -1,5 +1,7 @@
 package kyh.labs.lab3;
 
+import java.io.Serializable;
+
 public class Patient {
 
          String name;
@@ -10,24 +12,23 @@ public class Patient {
          sickness  = disease;
     }
 
-    public Patient(String inName) {
+    protected Patient(String inName) {
             name = inName;
     }
 
-    public boolean isSick() {
+    protected boolean isSick() {
 
         if(sickness == null) {
             return false;
         }else
          return true;
-
     }
 
-    public String getSickness() {
+    protected String getSickness() {
 
         return sickness;
     }
-    public String takeMedication(Medicine medicine) {
+    protected String takeMedication(Medicine medicine) {
 
         if(medicine.getTreatmentName().equals(this.sickness)) {
              this.sickness = null;
@@ -37,7 +38,7 @@ public class Patient {
         return null;
     }
 
-    public String getName() {
+    protected String getName() {
         return name;
     }
 
