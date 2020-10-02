@@ -7,7 +7,7 @@ public class Patient {
          String name;
          String sickness;
 
-    public Patient(String inName, String disease) {
+     Patient(String inName, String disease) {
           name = inName;
          sickness  = disease;
     }
@@ -15,33 +15,21 @@ public class Patient {
     protected Patient(String inName) {
             name = inName;
     }
-
     protected boolean isSick() {
-
-        if(sickness == null) {
-            return false;
-        }else
-         return true;
+        return sickness != null;
     }
-
     protected String getSickness() {
-
         return sickness;
     }
-    protected String takeMedication(Medicine medicine) {
+     void takeMedication(Medicine medicine) {
 
         if(medicine.getTreatmentName().equals(this.sickness)) {
-             this.sickness = null;
+             sickness = null;
          }
-
-        String result = medicine.toString();
-        return null;
     }
-
     protected String getName() {
         return name;
     }
-
 }
 
 

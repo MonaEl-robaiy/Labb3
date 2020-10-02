@@ -12,11 +12,7 @@ public class testP {
         assertNotEquals("hej", p.getName());
     }
 
-   @Test
-   public void testSickness(){
-       Disease d = new disease("Olle");
-        assertEquals("Olle", s.getSickness());
-        assertNotEquals("hej", s.getSickness());
-    }
+
+
 
 }
